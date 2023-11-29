@@ -23,6 +23,7 @@ exports.get = async function (req, res) {
     });
   }
 };
+
 exports.create = async function (req, res) {
   try {
     const data = req.body;
@@ -71,6 +72,14 @@ exports.create = async function (req, res) {
 //     message: "Endpoint GET User",
 //   });
 // };
+
+// exports.create = async function (req, res) {
+//   res.status(200).json({
+//     success: true,
+//     message: "Endpoint Create User",
+//   });
+// };
+
 exports.getById = async function (req, res) {
   const { id } = req.params;
   res.status(200).json({
@@ -79,12 +88,7 @@ exports.getById = async function (req, res) {
     id: id,
   });
 };
-// exports.create = async function (req, res) {
-//   res.status(200).json({
-//     success: true,
-//     message: "Endpoint Create User",
-//   });
-// };
+
 exports.update = async function (req, res) {
   const { id } = req.params;
   res.status(200).json({
